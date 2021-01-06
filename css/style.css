@@ -1,0 +1,44 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+.container {
+  margin: 0 auto;
+  height: 600px;
+  width: 600px;
+}
+
+.board {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  table-layout: fixed;
+}
+
+td {
+  padding: 5px;
+  background-color: white;
+}
+
+.squarePlaceX {
+  font-family: 'Indie Flower', cursive;
+  color: black;
+  text-align: center;
+  font-size: 6em;
+  height: 187.333px;
+  width: 187.333px;
+  padding: 5px;
+}
+
+.square {
+  font-family: 'Indie Flower', cursive;
+  color: black;
+  text-align: center;
+  font-size: 6em;
+  height: 187.333px;
+  width: 187.333px;
+  padding: 5px;
+}
+
+
+
+/* font-family: 'Indie Flower', cursive; */
