@@ -41,7 +41,7 @@ td {
   border: 1px solid black;
 }
 
-.xScore, .oScore {
+.xScore, .oScore, .roundCounter {
   font-family: 'Indie Flower', cursive;
   font-size: 2em;
 }
@@ -49,4 +49,9 @@ td {
 .oScore {
   position: relative;
   left: 400px;
+}
+
+.roundCounter {
+  position: relative;
+  left: 200px;
 }

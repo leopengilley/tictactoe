@@ -1,8 +1,11 @@
 $(document).ready(function () {
 
 var turncount = 0;
-xTally = 0;
-oTally = 0;
+let xTally = 0;
+let oTally = 0;
+let roundNum = 1;
+
+$('.roundCounter').text("Round: 1")
 
 const play = function () {
   $('.square').on('click', function (event) {
@@ -41,15 +44,20 @@ const checkWinner = function () {
     $('#square5').text("X Wins!");
     xTally = xTally + 1;
     $('.xScore').text('x:  ' + xTally);
+    roundNum = roundNum + 1;
+    $('.roundCounter').text("Round: " + roundNum);
   } if (oWins1 || oWins2 || oWins3 || oWins4 || oWins5 || oWins6 || oWins7 || oWins8) {
     $('.square').text("");
     $('#square5').text("O Wins!");
     oTally = oTally + 1;
     $('.oScore').text('o:  ' + oTally);
+    roundNum = roundNum + 1;
+    $('.roundCounter').text("Round: " + roundNum);
   } else if ($('.square').text().length === 9 && $('#.square5').text() === 1 ) {
     $('.square').text("");
     $('#square5').text("Tie!");
-  }
+    roundNum = roundNum + 1;
+    $('.roundCounter').text("Round: " + roundNum);  }
 };
 
 play();
