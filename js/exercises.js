@@ -7,29 +7,23 @@ const changeTurn = function () {
     turncount = turncount + 1;
     console.log(turncount);
     if (turncount % 2 == 0) {
-            $('.square').on('click', function (event) {
-                $target = $(event.target);
                 this.innerHTML = 'O';
-              });
       } else {
-              $('.square').on('click', function (event) {
-                  $target = $(event.target);
                   this.innerHTML = 'X';
-                 });
       };
+  checkWinner();
+
   });
  };
 
 const checkWinner = function () {
-  if ($('#square1').html() === $('#square2').html() === $('#square3').html()) {
-    console.log('Winner!');
+  if ($('#square1').text() === $('#square2').text() && $('#square2').text() === $('#square3').text() && $('#square1').text() === "X") {
+    console.log('X Wins!');
+  } else if ($('#square1').text() === $('#square2').text() && $('#square2').text() === $('#square3').text() && $('#square1').text() === "O") {
+    console.log('O Wins!');
   };
 };
 
-
-
 changeTurn();
-checkWinner();
-
 
 });
