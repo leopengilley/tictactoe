@@ -1,8 +1,10 @@
 $(document).ready(function () {
 
 var turncount = 0;
+xTally = 0;
+oTally = 0;
 
-const changeTurn = function () {
+const play = function () {
   $('.square').on('click', function (event) {
     turncount = turncount + 1;
     console.log(turncount);
@@ -34,18 +36,22 @@ const checkWinner = function () {
   const oWins7 = $('#square1').text() === $('#square5').text() && $('#square5').text() === $('#square9').text() && $('#square1').text() === "O";
   const oWins8 = $('#square3').text() === $('#square5').text() && $('#square5').text() === $('#square7').text() && $('#square3').text() === "O";
 
-
   if (xWins1 || xWins2 || xWins3 || xWins4 || xWins5 || xWins6 || xWins7 || xWins8) {
-    console.log('X Wins!');
-    $('.xScore')
     $('.square').text("");
-
-  } else if (oWins1 || oWins2 || oWins3 || oWins4 || oWins5 || oWins6 || oWins7 || oWins8) {
-    console.log('O Wins!');
+    $('#square5').text("X Wins!");
+    xTally = xTally + 1;
+    $('.xScore').text('x:  ' + xTally);
+  } if (oWins1 || oWins2 || oWins3 || oWins4 || oWins5 || oWins6 || oWins7 || oWins8) {
     $('.square').text("");
-  };
+    $('#square5').text("O Wins!");
+    oTally = oTally + 1;
+    $('.oScore').text('o:  ' + oTally);
+  } else if ($('.square').text().length === 9 && $('#.square5').text() === 1 ) {
+    $('.square').text("");
+    $('#square5').text("Tie!");
+  }
 };
 
-changeTurn();
+play();
 
 });

@@ -12,6 +12,7 @@
   width: 100%;
   background-color: black;
   table-layout: fixed;
+  border-collapse: collapse;
 }
 
 td {
@@ -37,8 +38,15 @@ td {
   height: 187.333px;
   width: 187.333px;
   padding: 5px;
+  border: 1px solid black;
 }
 
+.xScore, .oScore {
+  font-family: 'Indie Flower', cursive;
+  font-size: 2em;
+}
 
-
-/* font-family: 'Indie Flower', cursive; */
+.oScore {
+  position: relative;
+  left: 400px;
+}
