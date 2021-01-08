@@ -59,7 +59,7 @@ td {
   padding: 5px;
 }
 
-/* Styling board squares to look like a tic tac toe board */
+/* Start styling tic tac toe board */
 .topLeft {
   border-right: 8px solid #094040;
   border-bottom: 8px solid #094040;
@@ -84,7 +84,7 @@ td {
   border-left: 8px solid #094040;
 }
 
-/* done styling board */
+/* finished styling board */
 
 .turn {
   height: 20%;
